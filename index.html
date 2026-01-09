@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Genomics of Crop Ecosystem Services — PAG33 Workshop</title>
-  <meta name="description" content="PAG33 workshop: Genomics of Crop Ecosystem Services — Monday, Jan 12, 2026 (6:20–8:30 PM), room Pacific E. Call for 20‑min talks. Deadlines: speakers by Nov 15, 2025; abstracts by Dec 8, 2025."/>
+  <meta name="description" content="PAG33 workshop: Genomics of Crop Ecosystem Services — Monday, Jan 12, 2026 (6:20–8:30 PM), room Pacific E. Registration now closed."/>
   <meta property="og:title" content="Genomics of Crop Ecosystem Services — PAG33 Workshop"/>
-  <meta property="og:description" content="Call for talks. PAG33, San Diego. Mon, Jan 12, 2026, Pacific E. Speakers due Nov 15, 2025."/>
+  <meta property="og:description" content="PAG33, San Diego. Mon, Jan 12, 2026, Pacific E. Registration closed."/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://user-images.githubusercontent.com/placeholder/pag33-hero.png"/>
   <meta name="theme-color" content="#0ea5e9"/>
@@ -48,6 +48,7 @@
     .badge{display:inline-flex;align-items:center;gap:10px; font-weight:600; font-size:14px; color:white;
       background: linear-gradient(90deg,var(--accent),var(--accent2)); padding:8px 14px; border-radius:999px;
       box-shadow:0 6px 20px rgba(79,70,229,.35)}
+    .badge.closed{background: linear-gradient(90deg,#64748b,#475569); box-shadow:0 6px 20px rgba(71,85,105,.35)}
     .title{font-weight:800; font-size: clamp(28px, 4.6vw, 54px); line-height:1.05; color:white; margin:.5rem 0;}
     .subtitle{color:#dbeafe; font-size: clamp(16px,2.1vw,22px); max-width:850px}
 
@@ -83,9 +84,21 @@
     .milestone{position:relative;margin:10px 0 14px 0;padding-left:6px}
     .dot{position:absolute;left:-17px;top:6px;width:12px;height:12px;border-radius:50%;background:linear-gradient(180deg,#38bdf8,#6366f1);box-shadow:0 0 0 4px rgba(99,102,241,.15)}
 
-    /* --- Speaker cards --- */
-    .speaker{display:flex;gap:14px;align-items:flex-start;padding:14px;border:1px solid #eef2ff;border-radius:16px;background:linear-gradient(180deg,#ffffff, #f9fbff)}
-    .avatar{width:54px;height:54px;border-radius:50%;background:linear-gradient(135deg,#bae6fd,#a5b4fc); flex:0 0 54px}
+    /* --- Presentation schedule --- */
+    .presentation{border-left:3px solid #e0e7ff;padding:12px 16px;margin:10px 0;background:linear-gradient(90deg,#f8fafc,#ffffff);border-radius:8px}
+    .presentation .time{font-weight:800;color:#4f46e5;font-size:14px;margin-bottom:6px}
+    .presentation .talk-title{font-weight:700;color:#0f172a;margin-bottom:4px;line-height:1.4}
+    .presentation .presenter{color:#64748b;font-size:14px}
+    .presentation.highlight{border-left-color:#a78bfa;background:linear-gradient(90deg,#faf5ff,#ffffff)}
+
+    /* --- Organizer card --- */
+    .organizer-card{display:flex;gap:16px;align-items:center;padding:18px;border:1px solid #e0e7ff;border-radius:16px;background:linear-gradient(135deg,#faf5ff,#f0f9ff)}
+    .organizer-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,#a78bfa,#38bdf8);flex:0 0 64px;display:flex;align-items:center;justify-content:center;font-size:24px;font-weight:800;color:white}
+
+    /* --- Alert banner --- */
+    .alert{padding:14px 18px;border-radius:14px;margin-bottom:20px;border:1px solid;font-weight:600}
+    .alert.info{background:#eff6ff;border-color:#bfdbfe;color:#1e40af}
+    .alert.warning{background:#fef3c7;border-color:#fcd34d;color:#92400e}
 
     /* --- Footer --- */
     footer{color:#cbd5e1}
@@ -105,54 +118,56 @@
 
   <header class="hero wrap">
     <div class="badge">PAG33 • San Diego • Mon, Jan 12, 2026</div>
+    <div class="badge closed" style="margin-left:10px">Registration Closed</div>
     <h1 class="title">Genomics of Crop Ecosystem Services</h1>
     <p class="subtitle">A PAG33 community workshop on genomic innovations for sustainable agricultural intensification across the food‑energy‑water nexus — from perennial grains and orphan crops to pollinators and plant‑microbe symbioses.</p>
     <div class="chips">
       <span class="chip breathe">Room: <strong>Pacific E</strong></span>
       <span class="chip">Time: <strong>6:20–8:30 PM</strong></span>
+      <span class="chip">Duration: <strong>2 hours 10 minutes</strong></span>
       <span class="chip">Format: <strong>In‑person only</strong></span>
-      <span class="chip">Talks: <strong>~20 min</strong></span>
     </div>
     <div class="mt">
-      <a class="btn btn-primary" href="#call">Propose a Talk</a>
+      <a class="btn btn-ghost" href="#presentations">View Schedule</a>
       <a class="btn btn-ghost" href="#details">Workshop Details</a>
     </div>
   </header>
 
   <main class="wrap grid" style="gap:26px">
-    <!-- Key Dates -->
+    <!-- Key Info -->
     <section id="dates" class="grid two" data-reveal>
       <div class="card p">
-        <h2>Key dates</h2>
+        <h2>Workshop Information</h2>
+        <div class="alert info">
+          Registration for speakers is now closed. See the full presentation schedule below.
+        </div>
         <div class="grid">
           <div class="deadline">
             <div>
-              <div class="kicker">Speaker nominations due</div>
-              <strong>Nov 15, 2025</strong>
-            </div>
-            <div class="countdown" id="cd-speakers">—</div>
-          </div>
-          <div class="deadline">
-            <div>
-              <div class="kicker">Workshop abstracts due</div>
-              <strong>Dec 8, 2025</strong>
-            </div>
-            <div class="countdown" id="cd-abstracts">—</div>
-          </div>
-          <div class="deadline">
-            <div>
               <div class="kicker">Workshop session</div>
-              <strong>Jan 12, 2026 • 6:20–8:30 PM • Pacific E</strong>
+              <strong>Jan 12, 2026 • 6:20–8:30 PM</strong>
             </div>
             <div>
               <button class="btn btn-primary" id="add-ics">Add to Calendar</button>
+            </div>
+          </div>
+          <div class="deadline">
+            <div>
+              <div class="kicker">Location</div>
+              <strong>Pacific E, San Diego</strong>
+            </div>
+          </div>
+          <div class="deadline">
+            <div>
+              <div class="kicker">Duration</div>
+              <strong>2 hours 10 minutes</strong>
             </div>
           </div>
         </div>
       </div>
       <div class="card p" id="share">
         <h2>Share / invite</h2>
-        <p class="muted">Know someone a perfect fit? Share this page or send a pre‑filled email invite.</p>
+        <p class="muted">Share this page with colleagues interested in attending the workshop.</p>
         <div class="grid" style="grid-template-columns:repeat(2,minmax(0,1fr))">
           <button class="btn btn-primary" id="webshare">Share this page</button>
           <a class="btn btn-ghost" id="mailtoInvite" target="_blank" rel="noopener">Email an invite</a>
@@ -161,75 +176,82 @@
       </div>
     </section>
 
-    <!-- Call for Talks -->
-    <section id="call" class="card p" data-reveal>
-      <h2>Call for ~20‑minute talks</h2>
-      <p>We welcome proposals spanning <em>genomics of existing crops and new domesticates</em>, ecosystem‑service‑oriented breeding (e.g., perennial grains), orphan crops with local impact, and the <em>phytoecosystem</em>: plant–microbe interactions and pollination biology. Talks should emphasize innovative solutions to sustainable intensification under climate change and evolving market incentives for ecosystem services.</p>
-      <div class="grid two mt">
-        <div>
-          <h3>How to propose</h3>
-          <ol>
-            <li>Prepare a 3–5 sentence summary of your topic.</li>
-            <li>Include author(s), affiliation(s), and contact information.</li>
-            <li>Indicate fit with one or more focus areas (below).</li>
-          </ol>
-          <div class="mt">
-            <a class="btn btn-primary" id="mailtoCFP" target="_blank" rel="noopener">Email Dr. Andrew Paterson</a>
-            <p class="muted" style="margin:.5rem 0 0 0">Note: The meeting does <strong>not</strong> defray speaker costs; in‑person talks only.</p>
-          </div>
-        </div>
-        <div>
-          <h3>Focus areas</h3>
-          <ul>
-            <li>Perennial grain systems; multi‑functional agroecosystems</li>
-            <li>Orphan/local crops delivering carbon or water‑quality services</li>
-            <li>Genomic dissection of plant–microbiome mutualism/antagonism</li>
-            <li>Pollination genomics (e.g., honeybee biology and crop fitness)</li>
-            <li>Foundational genome science enabling ecosystem service gains</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- Details / Rationale -->
+    <!-- Details / About -->
     <section id="details" class="card p" data-reveal>
-      <h2>About the workshop</h2>
-      <p>New directions in crop production are being shaped by climate change and market programs that place tangible value on ecosystem services (e.g., carbon capture, water quality). Reward structures are shifting, and genomic insights can accelerate solutions across the food‑energy‑water nexus while agriculture adapts to reduced freshwater availability.</p>
-      <p>We seek to encourage and disseminate results across crops and their <em>phytoecosystems</em>—including crop wild relatives, microbial partners (mutualists, commensals, parasites), and essential pollinators.</p>
-      <div class="timeline mt">
-        <div class="milestone"><div class="dot"></div>
-          <strong>Session</strong>: Mon, Jan 12, 2026 • 6:20–8:30 PM • Pacific E (San Diego, CA, USA)
-        </div>
-        <div class="milestone"><div class="dot"></div>
-          <strong>Speakers</strong>: 5–6 slots (~20 min each); in‑person only
-        </div>
-        <div class="milestone"><div class="dot"></div>
-          <strong>Organizer</strong>: Andrew H. Paterson (<a href="mailto:patersonah@gmail.com">patersonah@gmail.com</a>)
-        </div>
+      <h2>About the Workshop</h2>
+      <p>New directions in crop production and improvement are being steered by the intersection of climate change and market-based programs placing tangible value on ecosystem services (such as carbon capture or water quality), changing the products for which agricultural producers are rewarded. The proposer seeks to encourage, and disseminate results of, genomic research that will contribute to innovative solutions to the critical food-energy-water (FEW) problem of sustainable agricultural intensification, in an environment of climate change and in anticipation of availability to agriculture of a much smaller portion of the world's fresh water than the estimated ~70% which it has grown accustomed to using.</p>
+      <p>Examples of salient research topics include genomics of existing crops or new domesticates toward goals such as breeding for novel production systems (e.g., perennial grains), or genomics of "orphan" crops cultivated locally and/or on limited scale that offer novel ecosystem services and/or impact on food security. Also appropriate are studies that elucidate the fundamental nature of genes and genomes of plants and their many symbionts in the 'phytoecosystem', for example constituents of the plant microbiome with mutualistic, commensalistic or parasitic relationships; or plant pollinators such as honeybees that are indispensable to plant reproductive fitness and agricultural productivity.</p>
+    </section>
+
+    <!-- Presentation Schedule -->
+    <section id="presentations" class="card p" data-reveal>
+      <h2>Presentation Schedule</h2>
+      <p class="muted" style="margin-bottom:20px">Monday, January 12, 2026 • Pacific E</p>
+      
+      <div class="presentation">
+        <div class="time">6:20 PM</div>
+        <div class="talk-title">Unraveling Specialized Metabolism in Plant-Microbiome Interactions Using a Multi-Omics-Based Approach</div>
+        <div class="presenter">Presenting Author: Yezhang Ding</div>
+      </div>
+
+      <div class="presentation">
+        <div class="time">6:40 PM</div>
+        <div class="talk-title">Influence of Bacillus Inoculation on Rhizosphere Microbiome Structure and Functional Potential in Poplar</div>
+        <div class="presenter">Presenting Author: Beant Kapoor</div>
+      </div>
+
+      <div class="presentation">
+        <div class="time">7:00 PM</div>
+        <div class="talk-title">Integrating Phenomics, Genomics, and Predictive Modeling to Accelerate Ideotype Breeding in Grain Sorghum</div>
+        <div class="presenter">Presenting Author: Dinesh Kumar Saini</div>
+      </div>
+
+      <div class="presentation highlight">
+        <div class="time">7:20 PM</div>
+        <div class="talk-title">PGDD2.0: A Comparative Genomics Platform for Linking Gene Duplication, Ecological Function, and Ecosystem Services</div>
+        <div class="presenter">Presenting Author: Ankush Sharma</div>
+      </div>
+
+      <div class="presentation">
+        <div class="time">7:40 PM</div>
+        <div class="talk-title">Genomic Diversity and Trait Architecture Supporting Ecosystem Services in a Perennial Crop - A Case Study in Asparagus</div>
+        <div class="presenter">Presenting Author: Gurleen Sidhu</div>
+      </div>
+
+      <div class="presentation">
+        <div class="time">8:00 PM</div>
+        <div class="talk-title">Intercropping for Sustainable Agricultural Intensification and Improved Agroecosystem Services</div>
+        <div class="presenter">Presenting Author: Juan David Arbelaez Velez</div>
       </div>
     </section>
 
-    <!-- Speakers (placeholder list you can edit) -->
-    <section id="speakers" class="card p" data-reveal>
-      <h2>Speakers (to be announced)</h2>
-      <div class="grid" id="speakerList" style="grid-template-columns:repeat(auto-fit,minmax(280px,1fr))"></div>
-      <p class="muted mt">Early requests are most likely to receive one of the available slots.</p>
+    <!-- Organizer -->
+    <section id="organizer" class="card p" data-reveal>
+      <h2>Workshop Organizer</h2>
+      <div class="organizer-card">
+        <div class="organizer-avatar">AP</div>
+        <div>
+          <div style="font-weight:800;font-size:20px;color:#0f172a">Andrew H. Paterson</div>
+          <div style="font-weight:600;color:#6366f1;margin:4px 0">University of Georgia</div>
+          <div style="color:#64748b">Contact: <a href="mailto:patersonah@gmail.com" style="color:#4f46e5">patersonah@gmail.com</a></div>
+        </div>
+      </div>
     </section>
 
     <!-- FAQ -->
     <section id="faq" class="card p" data-reveal>
       <h2>FAQ</h2>
       <details open>
-        <summary><strong>Are remote talks allowed?</strong></summary>
-        <p>No. Talks must be presented in person (remote talks were limited to the Covid period).</p>
+        <summary><strong>Is registration still open?</strong></summary>
+        <p>No, speaker registration is now closed. The presentation schedule is finalized.</p>
       </details>
       <details>
-        <summary><strong>Are travel/registration costs covered?</strong></summary>
-        <p>Unfortunately, no. The meeting does not defray speaker costs.</p>
+        <summary><strong>Can I attend as an audience member?</strong></summary>
+        <p>Yes! The workshop is open to all PAG33 attendees. Simply attend the session on Monday, January 12 at 6:20 PM in Pacific E.</p>
       </details>
       <details>
-        <summary><strong>Who should I contact?</strong></summary>
-        <p>Please email <a href="mailto:patersonah@gmail.com">patersonah@gmail.com</a> with your proposed subject and brief description.</p>
+        <summary><strong>Who should I contact with questions?</strong></summary>
+        <p>Please email <a href="mailto:patersonah@gmail.com">patersonah@gmail.com</a> for any inquiries.</p>
       </details>
     </section>
   </main>
@@ -242,7 +264,7 @@
           <p class="muted">© 2025 • Session date: Jan 12, 2026 • This is a community‑organized workshop.</p>
         </div>
         <div class="center">
-          <a class="btn btn-ghost" href="#call">Propose a Talk</a>
+          <a class="btn btn-ghost" href="#presentations">View Schedule</a>
         </div>
       </div>
     </div>
@@ -255,25 +277,10 @@
     },{threshold:.08});
     document.querySelectorAll('[data-reveal]').forEach(el=>obs.observe(el));
 
-    // --- Countdown helpers
-    function countdown(target, elId){
-      const out = document.getElementById(elId);
-      const tick = ()=>{
-        const now = new Date();
-        const diff = target - now;
-        if(diff <= 0){ out.textContent = 'passed'; return; }
-        const d = Math.floor(diff/86400000), h = Math.floor((diff%86400000)/3600000);
-        out.textContent = `${d}d ${h}h`;
-      };
-      tick(); setInterval(tick, 60*1000);
-    }
-    countdown(new Date('Nov 15, 2025 23:59:59'), 'cd-speakers');
-    countdown(new Date('Dec 8, 2025 23:59:59'), 'cd-abstracts');
-
     // --- ICS generator
     document.getElementById('add-ics').addEventListener('click', ()=>{
       // Event time is local San Diego (Pacific). Provide in UTC for compatibility.
-      const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//PAG33//Workshop//EN\nBEGIN:VEVENT\nUID:${crypto.randomUUID()}\nDTSTAMP:${toICS(new Date())}\nDTSTART:20260113T022000Z\nDTEND:20260113T043000Z\nSUMMARY:Genomics of Crop Ecosystem Services — PAG33 Workshop\nLOCATION:Pacific E, San Diego, CA\nDESCRIPTION:Call for talks and details: ${location.href}\nEND:VEVENT\nEND:VCALENDAR`;
+      const ics = `BEGIN:VCALENDAR\nVERSION:2.0\nPRODID:-//PAG33//Workshop//EN\nBEGIN:VEVENT\nUID:${crypto.randomUUID()}\nDTSTAMP:${toICS(new Date())}\nDTSTART:20260113T022000Z\nDTEND:20260113T043000Z\nSUMMARY:Genomics of Crop Ecosystem Services — PAG33 Workshop\nLOCATION:Pacific E, San Diego, CA\nDESCRIPTION:Workshop details: ${location.href}\nEND:VEVENT\nEND:VCALENDAR`;
       const blob = new Blob([ics], {type:'text/calendar'});
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a'); a.href=url; a.download='PAG33_Workshop.ics'; a.click();
@@ -290,7 +297,7 @@
     document.getElementById('webshare').addEventListener('click', async ()=>{
       try{
         if(navigator.share){
-          await navigator.share({title: document.title, text: 'PAG33 workshop: Genomics of Crop Ecosystem Services — call for talks', url: location.href});
+          await navigator.share({title: document.title, text: 'PAG33 workshop: Genomics of Crop Ecosystem Services', url: location.href});
         }else{
           await navigator.clipboard.writeText(location.href);
           alert('Link copied to clipboard!');
@@ -298,30 +305,9 @@
       }catch(e){ console.log(e); }
     });
 
-    // --- Pre-filled mailto links
-    const mailCFP = `mailto:patersonah@gmail.com?subject=${encodeURIComponent('PAG33 Workshop Talk Proposal — Genomics of Crop Ecosystem Services')}&body=${encodeURIComponent(`Dear Dr. Paterson,\n\nI would like to propose a ~20-minute talk for the PAG33 workshop \'Genomics of Crop Ecosystem Services\'.\n\nProposed title: \nAuthors & affiliations: \nBrief description (3–5 sentences): \nFocus area(s): \n\nSincerely,\n`)}`;
-    document.getElementById('mailtoCFP').href = mailCFP;
-
-    const mailInvite = `mailto:?subject=${encodeURIComponent('PAG33 Call for Talks — Genomics of Crop Ecosystem Services')}&body=${encodeURIComponent(`Sharing an opportunity to speak at PAG33 (San Diego).\n\nSession: Genomics of Crop Ecosystem Services\nWhen/Where: Mon, Jan 12, 2026 (6:20–8:30 PM), Pacific E\nPropose a ~20-min talk by emailing Dr. Andrew Paterson (patersonah@gmail.com).\nDeadlines: Speakers by Nov 15, 2025; abstracts by Dec 8, 2025.\nDetails: ${location.href}`)}`;
+    // --- Pre-filled mailto link for invites
+    const mailInvite = `mailto:?subject=${encodeURIComponent('PAG33 Workshop — Genomics of Crop Ecosystem Services')}&body=${encodeURIComponent(`You're invited to attend the PAG33 workshop.\n\nSession: Genomics of Crop Ecosystem Services\nWhen/Where: Mon, Jan 12, 2026 (6:20–8:30 PM), Pacific E, San Diego\nDetails: ${location.href}`)}`;
     document.getElementById('mailtoInvite').href = mailInvite;
-
-    // --- Speakers placeholder (easy to edit inline or via JSON later)
-    const speakers = [
-      {name:'Coming soon', title:'—', org:'—'}
-    ];
-    const list = document.getElementById('speakerList');
-    const makeCard = s => {
-      const el = document.createElement('div'); el.className='speaker';
-      el.innerHTML = `<div class="avatar"></div>
-        <div>
-          <div style="font-weight:800">${s.name}</div>
-          <div class="muted">${s.title}</div>
-          <div style="font-weight:600; color:#334155; margin-top:4px">${s.org}</div>
-        </div>`;
-      return el;
-    };
-    speakers.forEach(s => list.appendChild(makeCard(s)));
   </script>
 </body>
 </html>
-
